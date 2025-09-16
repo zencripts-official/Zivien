@@ -96,7 +96,7 @@ Output: Return ONLY the final edited image. Do not return text.`;
 
     console.log('Sending image and prompt to the model...');
     const response: GenerateContentResponse = await ai.models.generateContent({
-        model: 'gemini-2.5-flash-image-preview',
+        model: 'gemini-1.5-flash',
         contents: { parts: [originalImagePart, textPart] },
     });
     console.log('Received response from model.', response);
@@ -130,7 +130,7 @@ Output: Return ONLY the final filtered image. Do not return text.`;
 
     console.log('Sending image and filter prompt to the model...');
     const response: GenerateContentResponse = await ai.models.generateContent({
-        model: 'gemini-2.5-flash-image-preview',
+        model: 'gemini-1.5-flash',
         contents: { parts: [originalImagePart, textPart] },
     });
     console.log('Received response from model for filter.', response);
@@ -168,7 +168,7 @@ Output: Return ONLY the final adjusted image. Do not return text.`;
 
     console.log('Sending image and adjustment prompt to the model...');
     const response: GenerateContentResponse = await ai.models.generateContent({
-        model: 'gemini-2.5-flash-image-preview',
+        model: 'gemini-1.5-flash',
         contents: { parts: [originalImagePart, textPart] },
     });
     console.log('Received response from model for adjustment.', response);
